@@ -53,7 +53,7 @@
                         </goals>
                     </execution>
                     <execution>
-                        <id>check</id>
+                        <id>verify</id>
                         <goals>
                             <goal>check</goal>
                         </goals>
