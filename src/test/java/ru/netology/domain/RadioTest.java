@@ -105,6 +105,19 @@ public class RadioTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void shouldCurrentVolumeHighMax() {
+        radio.setMinVolume(0);
+        radio.setMaxVolume(10);
+        radio.setCurrentVolume(11);
+        assertEquals(0, radio.getCurrentVolume());
+    }
+
+    @Test
+    void shouldCurrentVolumeBelowMin() {
+        radio.setMinVolume(0);
+        radio.setMaxVolume(10);
+        radio.setCurrentVolume(-1);
+        assertEquals(0, radio.getCurrentVolume());
+    }
 }
-
-
