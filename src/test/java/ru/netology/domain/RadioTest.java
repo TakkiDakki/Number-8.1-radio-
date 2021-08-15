@@ -110,7 +110,7 @@ public class RadioTest {
         radio.setMinVolume(0);
         radio.setMaxVolume(10);
         radio.setCurrentVolume(11);
-        assertEquals(0, radio.getCurrentVolume());
+        assertEquals(10, radio.getCurrentVolume());
     }
 
     @Test
