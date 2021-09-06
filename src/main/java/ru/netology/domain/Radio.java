@@ -10,6 +10,7 @@ public class Radio {
     private int minVolume = 0;
     private boolean on;
 
+
     public String getName() {
         return name;
     }
@@ -92,14 +93,15 @@ public class Radio {
         }
     }
 
-       public void chooseCurrentRadioStation(int newStation) {
-        if (newStation > maxStation) {
+       public void chooseCurrentRadioStation(int currentStation) {
+        if (currentStation> maxStation) {
             return;
         }
-        if (newStation < minStation) {
+        if (currentStation < minStation) {
+            currentStation = minStation;
             return;
         }
-        this.currentStation = newStation;
+        this.currentStation = currentStation;
     }
 
 
